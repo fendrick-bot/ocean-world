@@ -5,6 +5,7 @@ import { CharacterSection } from "./components/SectionManager/CharacterSection";
 import { MapSection } from "./components/SectionManager/MapSection";
 import { PhoneSection } from "./components/SectionManager/PhoneSection";
 import { MoreAboutSection } from "./components/SectionManager/MoreAboutSection";
+import { InView } from "./components/MotionComps/InView";
 
 export default function Home() {
   return (
@@ -20,19 +21,64 @@ export default function Home() {
       </nav>
 
       {/* // using intro section */}
-      <IntroSection />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -200px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <IntroSection />
+      </InView>
 
       {/* // using character section */}
-      <CharacterSection />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -200px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <CharacterSection />
+      </InView>
 
       {/* //using map section */}
-      <MapSection />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -200px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <MapSection />
+      </InView>
 
       {/* //using phone section */}
-      <PhoneSection />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -200px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <PhoneSection />
+      </InView>
 
       {/* //using phone section */}
-      <MoreAboutSection />
+      <InView
+        variants={{
+          hidden: { opacity: 0, y: 100, filter: "blur(4px)" },
+          visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+        }}
+        viewOptions={{ margin: "0px 0px -200px 0px" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
+        <MoreAboutSection />
+      </InView>
 
       <br />
       <br />
